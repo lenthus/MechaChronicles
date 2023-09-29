@@ -11,7 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      
+      Shield.belongsTo(
+        models.User,{
+          foreignKey:'userId'
+        }
+      )
+      Shield.belongsTo(
+        models.r_shoulder,{
+          foreignKey:'userId'
+        }
+      )
+
     }
   }
   Shield.init({
@@ -43,6 +53,12 @@ module.exports = (sequelize, DataTypes) => {
     value:{
       type:DataTypes.INTEGER,
       allowNull: false,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+    },
+    level: {
+      type: DataTypes.INTEGER,
     },
   }, {
     sequelize,
