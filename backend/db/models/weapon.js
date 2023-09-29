@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
 
     },
-    rounds_per_shot: {
+    roll: {
       type:DataTypes.INTEGER,
 
     },

@@ -16,10 +16,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       ammo: {
         type: Sequelize.INTEGER
@@ -27,7 +29,7 @@ module.exports = {
       heat_gen: {
         type: Sequelize.INTEGER
       },
-      rounds_per_shot: {
+      roll: {
         type: Sequelize.INTEGER
       },
       min_range: {
@@ -40,7 +42,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       value: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       userId: {
         type: Sequelize.INTEGER,
