@@ -46,6 +46,9 @@ module.exports = {
       level: {
         type: Sequelize.INTEGER,
       },
+      weight: {
+        type: Sequelize.INTEGER,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

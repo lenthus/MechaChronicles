@@ -60,6 +60,9 @@ module.exports = (sequelize, DataTypes) => {
     level: {
       type: DataTypes.INTEGER,
     },
+    weight: {
+      type: DataTypes.INTEGER,
+    },
   }, {
     sequelize,
     modelName: 'Shield',
