@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey:'userId'
         }
       )
-      Shield.belongsTo(
-        models.r_shoulder,{
-          foreignKey:'userId'
-        }
-      )
+      // Shield.belongsTo(
+      //   models.r_shoulder,{
+      //     foreignKey:'userId'
+      //   }
+      // )
 
     }
   }

@@ -11,6 +11,21 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Weapon.belongsTo(
+        models.User,{
+          foreignKey:'userId'
+        }
+      )
+      // Weapon.belongsTo(
+      //   models.LeftArm,{
+      //     foreignKey:'id'
+      //   }
+      // )
+      // Weapon.belongsTo(
+      //   models.RightArm,{
+      //     foreignKey:'id'
+      //   }
+      // )
     }
   }
   Weapon.init({
@@ -54,7 +69,13 @@ module.exports = (sequelize, DataTypes) => {
     value: {
       type:DataTypes.INTEGER,
       allowNull: false,
-    }
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+    },
+    level: {
+      type: DataTypes.INTEGER,
+    },
   }, {
     sequelize,
     modelName: 'Weapon',
