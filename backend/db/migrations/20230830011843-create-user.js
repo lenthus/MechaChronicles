@@ -24,17 +24,28 @@ module.exports = {
         allowNull: false,
         unique: true
       },
-      firstName: {
-        type: Sequelize.STRING(256),
-        allowNull: false,
-      },
-      lastName: {
-        type: Sequelize.STRING(256),
-        allowNull: false,
-      },
       hashedPassword: {
         type: Sequelize.STRING.BINARY,
         allowNull: false
+      },
+      level: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 1
+      },
+      currentXp: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      money: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      currentMech: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,

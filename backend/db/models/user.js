@@ -30,21 +30,32 @@ module.exports = (sequelize, DataTypes) => {
           isEmail: true
         }
       },
-      firstName:{
-        type: DataTypes.STRING,
-        allowNull:false
-      },
-      lastName:{
-        type: DataTypes.STRING,
-        allowNull: false
-      },
       hashedPassword: {
         type: DataTypes.STRING.BINARY,
         allowNull: false,
         validate: {
           len: [60, 60]
         }
-      }
+      },
+      level:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 1
+      },
+      currentXp:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      money:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      currentMech:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     {
       sequelize,
