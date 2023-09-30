@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
       RightArm.belongsTo(
         models.User,
         { foreignKey: 'userId' }
+      ),
+      RightArm.belongsTo(
+        models.Mech,{
+          foreignKey:'right_arm',
+        }
       )
     }
   }

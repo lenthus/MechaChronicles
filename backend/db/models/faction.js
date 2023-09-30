@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey:'organizerId'
         }
       )
-      Faction.belongsTo(
+      Faction.hasMany(
         models.User,{
           foreignKey:'memberId'
         }

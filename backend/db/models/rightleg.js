@@ -10,10 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Body.belongsTo(
+      RightLeg.belongsTo(
         models.User,{
           foreignKey:'userId',
           onDelete:'Cascade'
+        }
+      ),
+      RightLeg.belongsTo(
+        models.Mech,{
+          foreignKey:'right_leg',
         }
       )
     }

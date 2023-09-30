@@ -15,6 +15,11 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey:'userId',
           onDelete:'Cascade'
         }
+      ),
+      Body.belongsTo(
+        models.Mech,{
+          foreignKey:'body',
+        }
       )
     }
   }
