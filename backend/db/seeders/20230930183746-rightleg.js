@@ -112,7 +112,7 @@ for (let userRightLeg of userRightLegs){
       const theUser = await User.findOne({where:{username}})
     
       for( let rightLegInfo of rightLeg){
-        await rightLeg.destroy({where:{ ...rightLegInfo, userId: theUser.id}})
+        await RightLeg.destroy({where:{ ...rightLegInfo, userId: theUser.id}})
       }
     }
   }
