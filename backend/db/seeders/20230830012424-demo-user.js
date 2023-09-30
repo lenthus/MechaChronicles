@@ -21,6 +21,24 @@ module.exports = {
         money: 0
       },
       {
+        email: 'michael.a.boyce999@gmail.com',
+        username: 'Shalakar',
+        hashedPassword: bcrypt.hashSync('Taekwondo1'),
+        level: 1,
+        currentXp: 0,
+        currentMech: null,
+        money: 0
+      },
+      {
+        email: 'michael.a.boyce999@gmail.com',
+        username: 'Shalakar',
+        hashedPassword: bcrypt.hashSync('Taekwondo1'),
+        level: 1,
+        currentXp: 0,
+        currentMech: null,
+        money: 0
+      },
+      {
         id: 711,
         email: 'demo@store.io',
         username: 'Store',
