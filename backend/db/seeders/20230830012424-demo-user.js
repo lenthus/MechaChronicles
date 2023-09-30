@@ -10,45 +10,51 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await User.bulkCreate([
-      {
-        email: 'michael.a.boyce999@gmail.com',
-        username: 'Shalakar',
-        hashedPassword: bcrypt.hashSync('Taekwondo1'),
-        level: 1,
-        currentXp: 0,
-        currentMech: null,
-        money: 0
-      },
-      {
-        email: 'michaeltest@michaeltest.com',
-        username: 'michaeltest',
-        hashedPassword: bcrypt.hashSync('michaeltest'),
-        level: 1,
-        currentXp: 0,
-        currentMech: null,
-        money: 0
-      },
-      {
-        email: 'devinmrichards95@yahoo.com',
-        username: 'GaimerGai',
-        hashedPassword: bcrypt.hashSync('password1234@'),
-        level: 1,
-        currentXp: 0,
-        currentMech: null,
-        money: 0
-      },
-      {
-        id: 711,
-        email: 'demo@store.io',
-        username: 'Store',
-        hashedPassword: bcrypt.hashSync('thankYouComeAgain'),
-        level: 1,
-        currentXp: 0,
-        currentMech: null,
-        money: 1000000000
-      },
-    ], { validate: true });
+    try{
+      
+      await User.bulkCreate([
+        {
+          email: 'michael.a.boyce999@gmail.com',
+          username: 'Shalakar',
+          hashedPassword: bcrypt.hashSync('Taekwondo1'),
+          level: 1,
+          currentXp: 0,
+          currentMech: null,
+          money: 0
+        },
+        {
+          email: 'michaeltest@michaeltest.com',
+          username: 'michaeltest',
+          hashedPassword: bcrypt.hashSync('michaeltest'),
+          level: 1,
+          currentXp: 0,
+          currentMech: null,
+          money: 0
+        },
+        {
+          email: 'devinmrichards95@yahoo.com',
+          username: 'GaimerGai',
+          hashedPassword: bcrypt.hashSync('password1234@'),
+          level: 1,
+          currentXp: 0,
+          currentMech: null,
+          money: 0
+        },
+        {
+          id: 711,
+          email: 'demo@store.io',
+          username: 'Store',
+          hashedPassword: bcrypt.hashSync('thankYouComeAgain'),
+          level: 1,
+          currentXp: 0,
+          currentMech: null,
+          money: 1000000000
+        },
+      ], { validate: true });
+    }
+    catch(err){
+      console.log(err)
+    }
   },
 
   async down (queryInterface, Sequelize) {

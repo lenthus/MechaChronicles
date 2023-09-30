@@ -26,17 +26,8 @@ module.exports = (sequelize, DataTypes) => {
         models.RightArm,{
           foreignKey:'weapon'
         }
-      ),
-      Shield.belongsTo(
-        models.Mech,{
-          foreignKey:'right_shoulder'
-        }
-      ),
-      Shield.belongsTo(
-        models.Mech,{
-          foreignKey:'left_shoulder'
-        }
       )
+
     }
   }
   Weapon.init({
