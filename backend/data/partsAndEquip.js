@@ -160,7 +160,7 @@ const bodies = [
         level: 1,
     },
     {
-        name:"Bocye MK.1",
+        name:"Boyce MK.1",
         description:"Boyce tech is known for being quick and highly armored, favoring close range combat.",
         health: 80,
         armor: 20,
