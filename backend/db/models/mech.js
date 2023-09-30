@@ -37,8 +37,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       )
       Mech.hasOne(
-        models.LLeg,{
-          foreignKey:'l_leg'
+        models.LeftLeg,{
+          foreignKey:'left_leg'
         }
       )
       Mech.hasOne(
@@ -47,8 +47,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       )
       Mech.hasOne(
-        models.RLeg,{
-          foreignKey:'r_leg'
+        models.RightLeg,{
+          foreignKey:'right_leg'
         }
       )
     }
@@ -75,7 +75,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       allowNull: false,
     },
-    l_shoulder:{
+    left_shoulder:{
       type:DataTypes.INTEGER,
       allowNull: false,
     },
@@ -83,11 +83,11 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       allowNull: false,
     },
-    l_leg:{
+    left_leg:{
       type:DataTypes.INTEGER,
       allowNull: false,
     },
-    r_shoulder:{
+    right_shoulder:{
       type:DataTypes.INTEGER,
       allowNull: false,
     },
@@ -95,7 +95,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       allowNull: false,
     },
-    r_leg:{
+    right_leg:{
       type:DataTypes.INTEGER,
       allowNull: false,
     },

@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       )
       // Shield.belongsTo(
-      //   models.r_shoulder,{
+      //   models.right_shoulder,{
       //     foreignKey:'userId'
       //   }
       // )

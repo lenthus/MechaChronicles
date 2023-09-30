@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class RLeg extends Model {
+  class RightLeg extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       )
     }
   }
-  RLeg.init({
+  RightLeg.init({
     name: {
       type: DataTypes.STRING,
       allowNull:false
@@ -47,12 +47,12 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'RLeg',
+    modelName: 'RightLeg',
     defaultScope: {
       attributes: {
         exclude: ["createdAt", "updatedAt"]
       }
     }
   });
-  return RLeg;
+  return RightLeg;
 };
