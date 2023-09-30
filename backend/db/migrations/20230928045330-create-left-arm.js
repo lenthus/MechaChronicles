@@ -52,6 +52,9 @@ module.exports = {
         type: Sequelize.INTEGER,
         defaultValue: 1
       },
+      isEquipped:{
+        type: Sequelize.BOOLEAN,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

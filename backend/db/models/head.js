@@ -56,6 +56,9 @@ module.exports = (sequelize, DataTypes) => {
     shortRange: {
       type: DataTypes.INTEGER
     },
+    isEquipped:{
+      type: DataTypes.BOOLEAN,
+    },
   }, {
     sequelize,
     modelName: 'Head',

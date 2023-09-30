@@ -79,6 +79,9 @@ module.exports = (sequelize, DataTypes) => {
     weight: {
       type: DataTypes.INTEGER,
     },
+    isEquipped:{
+      type: DataTypes.BOOLEAN,
+    },
   }, {
     sequelize,
     modelName: 'Weapon',

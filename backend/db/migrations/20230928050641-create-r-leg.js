@@ -1,4 +1,10 @@
 'use strict';
+
+let options = {};
+if (process.env.NODE_ENV === 'production') {
+  options.schema = process.env.SCHEMA;  // define your schema in options object
+}
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -36,6 +42,9 @@ module.exports = {
       value: {
         type: Sequelize.INTEGER
       },
+      isEquipped:{
+        type: Sequelize.BOOLEAN,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -49,6 +58,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('RLegs');
+    options.tableName = 'RLegs'
+    await queryInterface.dropTable(options);
   }
 };

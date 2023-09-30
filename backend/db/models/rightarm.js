@@ -52,6 +52,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       defaultValue: 1,
     },
+    isEquipped:{
+      type: DataTypes.BOOLEAN,
+    },
   }, {
     sequelize,
     modelName: 'RightArm',

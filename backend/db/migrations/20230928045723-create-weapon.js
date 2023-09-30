@@ -58,6 +58,9 @@ module.exports = {
       weight: {
         type: Sequelize.INTEGER,
       },
+      isEquipped:{
+        type: Sequelize.BOOLEAN,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
