@@ -21,18 +21,18 @@ module.exports = {
         money: 0
       },
       {
-        email: 'michael.a.boyce999@gmail.com',
-        username: 'Shalakar',
-        hashedPassword: bcrypt.hashSync('Taekwondo1'),
+        email: 'michaeltest@michaeltest.com',
+        username: 'michaeltest',
+        hashedPassword: bcrypt.hashSync('michaeltest'),
         level: 1,
         currentXp: 0,
         currentMech: null,
         money: 0
       },
       {
-        email: 'michael.a.boyce999@gmail.com',
-        username: 'Shalakar',
-        hashedPassword: bcrypt.hashSync('Taekwondo1'),
+        email: 'devinmrichards95@yahoo.com',
+        username: 'GaimerGai',
+        hashedPassword: bcrypt.hashSync('password1234@'),
         level: 1,
         currentXp: 0,
         currentMech: null,
@@ -55,7 +55,7 @@ module.exports = {
     options.tableName = 'Users';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      username: { [Op.in]: ['Shalakar', 'Store'] }
+      username: { [Op.in]: ['Shalakar', 'michaeltest', 'GaimerGai', 'Store' ] }
     }, {});
   }
 };

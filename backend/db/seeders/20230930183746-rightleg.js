@@ -1,16 +1,16 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-const {User, Body} = require('../models')
+const {User, RightLeg} = require('../models')
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
 }
 
-const userBodies = [
+const userRightLegs = [
   {
     username: 'Shalakar',
-    body: [{
+    rightLeg: [{
       name:"Boyce MK.1",
       description:"Boyce tech is known for being quick and highly armored, favoring close range combat.",
       health: 80,
@@ -24,7 +24,7 @@ const userBodies = [
   },
   {
     username: 'michaeltest',
-    body: [{
+    rightLeg: [{
       name:"Shuler MK.1",
       description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
       health: 150,
@@ -38,7 +38,7 @@ const userBodies = [
   },
   {
     username: 'GaimerGai',
-    body: [{
+    rightLeg: [{
       name:"Richards MK.1",
       description:"Richards Industries belives reliability is the most important quality in mech parts.",
       health: 110,
@@ -52,7 +52,7 @@ const userBodies = [
   },
   {
     username: 'Store',
-    body:[{
+    rightLeg:[{
       name:"Boyce MK.1",
       description:"Boyce tech is known for being quick and highly armored, favoring close range combat.",
       health: 80,
@@ -73,7 +73,7 @@ const userBodies = [
       value: 2000,
       userId: null,
       level: 1,
-    },
+  },
     {
       name:"Richards MK.1",
       description:"Richards Industries belives reliability is the most important quality in mech parts.",
@@ -90,29 +90,29 @@ const userBodies = [
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    options.tableName = 'Bodies';
+    options.tableName = 'RightLegs';
 
 
-for (let userBody of userBodies){
-  const {username, body} = userBody
+for (let userRightLeg of userRightLegs){
+  const {username, rightLeg} = userRightLeg
   const theUser = await User.findOne({where:{username}})
 
-  for( let bodyInfo of body){
-    await Body.create({ ...bodyInfo, userId: theUser.id})
+  for( let rightLegInfo of rightLeg){
+    await RightLeg.create({ ...rightLegInfo, userId: theUser.id})
   }
 }
 
   },
 
   async down (queryInterface, Sequelize) {
-    options.tableName = 'Bodies';
+    options.tableName = 'RightLegs';
 
-    for (let userBody of userBodies){
-      const {username, body} = userBody
+    for (let userRightLeg of userRightLegs){
+      const {username, rightLeg} = userRightLeg
       const theUser = await User.findOne({where:{username}})
     
-      for( let bodyInfo of body){
-        await Body.destroy({where:{ ...bodyInfo, userId: theUser.id}})
+      for( let rightLegInfo of rightLeg){
+        await rightLeg.destroy({where:{ ...rightLegInfo, userId: theUser.id}})
       }
     }
   }

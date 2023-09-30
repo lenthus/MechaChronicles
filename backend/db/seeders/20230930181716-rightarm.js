@@ -1,22 +1,22 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-const {User, Body} = require('../models')
+const {User, RightArm} = require('../models')
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
 }
 
-const userBodies = [
+const userRightArms = [
   {
     username: 'Shalakar',
-    body: [{
+    rightArm: [{
       name:"Boyce MK.1",
       description:"Boyce tech is known for being quick and highly armored, favoring close range combat.",
       health: 80,
       armor: 20,
+      weapon: null,
       weight: 8,
-      speed: 20,
       value: 1200,
       userId: null,
       level: 1,
@@ -24,13 +24,13 @@ const userBodies = [
   },
   {
     username: 'michaeltest',
-    body: [{
+    rightArm: [{
       name:"Shuler MK.1",
       description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
       health: 150,
       armor: 10,
+      weapon: null,
       weight: 15,
-      speed: 10,
       value: 2000,
       userId: null,
       level: 1,
@@ -38,27 +38,27 @@ const userBodies = [
   },
   {
     username: 'GaimerGai',
-    body: [{
+    rightArm: [{
       name:"Richards MK.1",
       description:"Richards Industries belives reliability is the most important quality in mech parts.",
       health: 110,
       armor: 15,
+      weapon: null,
       weight: 10,
-      speed: 10,
-      value: 1200,
+      value: 1000,
       userId: null,
       level: 1,
     }]
   },
   {
     username: 'Store',
-    body:[{
+    rightArm:[{
       name:"Boyce MK.1",
       description:"Boyce tech is known for being quick and highly armored, favoring close range combat.",
       health: 80,
       armor: 20,
+      weapon: null,
       weight: 8,
-      speed: 20,
       value: 1200,
       userId: null,
       level: 1,
@@ -68,20 +68,20 @@ const userBodies = [
       description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
       health: 150,
       armor: 10,
+      weapon: null,
       weight: 15,
-      speed: 10,
       value: 2000,
       userId: null,
       level: 1,
-    },
+  },
     {
       name:"Richards MK.1",
       description:"Richards Industries belives reliability is the most important quality in mech parts.",
       health: 110,
       armor: 15,
+      weapon: null,
       weight: 10,
-      speed: 10,
-      value: 1200,
+      value: 1000,
       userId: null,
       level: 1,
     }]
@@ -90,29 +90,29 @@ const userBodies = [
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    options.tableName = 'Bodies';
+    options.tableName = 'RightArms';
 
 
-for (let userBody of userBodies){
-  const {username, body} = userBody
+for (let userRightArm of userRightArms){
+  const {username, rightArm} = userRightArm
   const theUser = await User.findOne({where:{username}})
 
-  for( let bodyInfo of body){
-    await Body.create({ ...bodyInfo, userId: theUser.id})
+  for( let rightArmInfo of rightArm){
+    await RightArm.create({ ...rightArmInfo, userId: theUser.id})
   }
 }
 
   },
 
   async down (queryInterface, Sequelize) {
-    options.tableName = 'Bodies';
+    options.tableName = 'RightArms';
 
-    for (let userBody of userBodies){
-      const {username, body} = userBody
+    for (let userRightArm of userRightArms){
+      const {username, rightArm} = userRightArm
       const theUser = await User.findOne({where:{username}})
     
-      for( let bodyInfo of body){
-        await Body.destroy({where:{ ...bodyInfo, userId: theUser.id}})
+      for( let rightArmInfo of rightArm){
+        await RightArm.destroy({where:{ ...rightArmInfo, userId: theUser.id}})
       }
     }
   }
