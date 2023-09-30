@@ -37,9 +37,10 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        refrences:{
+        references:{
           model:'Users',
-          key: 'id'
+          key: 'id',
+          onDelete:'CASCADE'
         }
       },
       level: {

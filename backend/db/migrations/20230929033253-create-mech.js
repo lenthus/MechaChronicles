@@ -21,6 +21,7 @@ module.exports = {
         references: {
           model: 'Users',
           key: 'id',
+          onDelete:'CASCADE'
         },
       },
       name: {
@@ -43,7 +44,7 @@ module.exports = {
           key: 'id',
         },
       },
-      l_shoulder: {
+      left_shoulder: {
         type: Sequelize.INTEGER,
         // allowNull: false,
         // references: {
@@ -59,15 +60,15 @@ module.exports = {
           key: 'id',
         },
       },
-      l_leg: {
+      left_leg: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'LLEg',
+          model: 'LeftLeg',
           key: 'id',
         },
       },
-      r_shoulder: {
+      right_shoulder: {
         type: Sequelize.INTEGER,
         // allowNull: false,
         // references: {
@@ -83,11 +84,11 @@ module.exports = {
           key: 'id',
         },
       },
-      r_leg: {
+      right_leg: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'RLeg',
+          model: 'RightLeg',
           key: 'id',
         },
       },
