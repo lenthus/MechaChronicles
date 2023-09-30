@@ -56,6 +56,10 @@ module.exports = {
       shortRange: {
         type: Sequelize.INTEGER
       },
+      isEquipped: {
+        type: Sequelize.BOOLEAN,
+
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

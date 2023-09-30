@@ -50,6 +50,10 @@ module.exports = (sequelize, DataTypes) => {
     value:{
       type:DataTypes.INTEGER,
     },
+    isEquipped: {
+      type: DataTypes.BOOLEAN,
+
+    },
   }, {
     sequelize,
     modelName: 'Body',
