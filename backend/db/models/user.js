@@ -5,6 +5,79 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // define association here
+      User.hasOne(
+        models.LeftArm, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Shield, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Weapon, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasOne(
+        models.LeftLeg, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasOne(
+        models.RightLeg, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasOne(
+        models.Body, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasOne(
+        models.RightArm, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasOne(
+        models.Head, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Faction, {
+        foreignKey: 'organizerId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Faction, {
+        foreignKey: 'memberId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Mech, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      //This is for the current Mech
+      User.hasOne(
+        models.Mech, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
     }
   };
 
@@ -37,22 +110,22 @@ module.exports = (sequelize, DataTypes) => {
           len: [60, 60]
         }
       },
-      level:{
+      level: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 1
       },
-      currentXp:{
+      currentXp: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0
       },
-      money:{
+      money: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0
       },
-      currentMech:{
+      currentMech: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
