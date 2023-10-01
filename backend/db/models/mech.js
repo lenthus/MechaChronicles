@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Mech.belongsTo(
         models.User,{
-          foreignKey:'id'
+          foreignKey:'userId'
         }
       )
       Mech.hasOne(
         models.User,{
-          foreignKey:'id'
+          foreignKey:'currentMech'
         }
       )
       Mech.hasOne(

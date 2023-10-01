@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // define association here
-      User.hasOne(
+      User.hasMany(
         models.LeftArm, {
-        foreignKey: 'id',
+        foreignKey: 'userId',
         onDelete: 'Cascade'
       }
       )
@@ -23,42 +23,42 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'Cascade'
       }
       )
-      User.hasOne(
+      User.hasMany(
         models.LeftLeg, {
-        foreignKey: 'id',
-        onDelete: 'Cascade'
-      }
-      )
-      User.hasOne(
-        models.RightLeg, {
-        foreignKey: 'id',
-        onDelete: 'Cascade'
-      }
-      )
-      User.hasOne(
-        models.Body, {
-        foreignKey: 'id',
-        onDelete: 'Cascade'
-      }
-      )
-      User.hasOne(
-        models.RightArm, {
-        foreignKey: 'id',
-        onDelete: 'Cascade'
-      }
-      )
-      User.hasOne(
-        models.Head, {
-        foreignKey: 'id',
+        foreignKey: 'userId',
         onDelete: 'Cascade'
       }
       )
       User.hasMany(
-        models.Faction, {
-        foreignKey: 'organizerId',
+        models.RightLeg, {
+        foreignKey: 'userId',
         onDelete: 'Cascade'
       }
       )
+      User.hasMany(
+        models.Body, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.RightArm, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Head, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      // User.hasMany(
+      //   models.Faction, {
+      //   foreignKey: 'organizerId',
+      //   onDelete: 'Cascade'
+      // }
+      // )
       // User.hasMany(
       //   models.Faction, {
       //   foreignKey: 'memberId',

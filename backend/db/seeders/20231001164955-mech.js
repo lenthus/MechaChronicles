@@ -55,7 +55,7 @@ const userMechs = [
 module.exports = {
   async up (queryInterface, Sequelize) {
     options.tableName = 'Mechs';
-
+console.log("\n", Mech.tableName, "\n")
 
 for (let userMech of userMechs){
   const {username, mech} = userMech
