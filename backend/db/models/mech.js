@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     left_shoulder:{
       type:DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     left_arm:{
       type:DataTypes.INTEGER,
@@ -89,7 +89,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     right_shoulder:{
       type:DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     right_arm:{
       type:DataTypes.INTEGER,
