@@ -20,13 +20,14 @@ const userRightArms = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
     username: 'michaeltest',
     rightArm: [{
       name:"Shuler MK.1",
-      description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
+      description:"Shuler Shrines is known for producing sturdy laser focused parts.",
       health: 150,
       armor: 10,
       weapon: null,
@@ -34,6 +35,7 @@ const userRightArms = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -48,6 +50,7 @@ const userRightArms = [
       value: 1000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -62,10 +65,11 @@ const userRightArms = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     },
     {
       name:"Shuler MK.1",
-      description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
+      description:"Shuler Shrines is known for producing sturdy laser focused parts.",
       health: 150,
       armor: 10,
       weapon: null,
@@ -73,6 +77,7 @@ const userRightArms = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
     {
       name:"Richards MK.1",
@@ -84,6 +89,7 @@ const userRightArms = [
       value: 1000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
     }
 ];

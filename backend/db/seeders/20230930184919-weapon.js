@@ -13,7 +13,7 @@ const userWeapons = [
     weapons: [{
       name:"Boyce Fist MK.1",
       description:"Sometimes one good punch is all it takes",
-      type: "missle",
+      type: "missile",
       ammo: 20,
       heatGen: -50,
       roll: 10,
@@ -24,11 +24,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
       name:"Boyce Cannon MK.1",
       description:"If I attack its going to hurt",
-      type: "missle",
+      type: "missile",
       ammo: 10,
       heatGen: 20,
       roll: 1,
@@ -39,11 +40,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
-      name:"Boyce Missle Launcher MK.1",
+      name:"Boyce missile Launcher MK.1",
       description:"I love the silence that follows explosions",
-      type: "missle",
+      type: "missile",
       ammo: 10,
       heatGen: 20,
       roll: 6,
@@ -54,14 +56,15 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },]
   },
   {
     username: 'michaeltest',
     weapons: [    {
-      name:"Shuler Sniper Lazer MK.1",
+      name:"Shuler Sniper laser MK.1",
       description:"The suns rays are beautiful, but dont hold them too closely.",
-      type: "lazer",
+      type: "laser",
       ammo: 10,
       heatGen: 30,
       roll: 1,
@@ -72,11 +75,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
       name:"Shuler Rifle MK.1",
       description:"Few survive the heat of devotion.",
-      type: "lazer",
+      type: "laser",
       ammo: 10,
       heatGen: 10,
       roll: 3,
@@ -87,11 +91,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
-      name:"Shuler Lazer Launcher MK.1",
+      name:"Shuler laser Launcher MK.1",
       description:"The light of the moon shone down, and the unworthy were purified.",
-      type: "lazer",
+      type: "laser",
       ammo: 10,
       heatGen: 30,
       roll: 6,
@@ -102,6 +107,7 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   }]
   },
   {
@@ -120,6 +126,7 @@ const userWeapons = [
       value: 1500,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
       name:"Richards Gattling Gun MK.1",
@@ -135,6 +142,7 @@ const userWeapons = [
       value: 1500,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
       name:"Richards Sniper Riffle MK.1",
@@ -150,6 +158,7 @@ const userWeapons = [
       value: 1500,
       userId: null,
       level: 1,
+      isEquipped: false
   },]
   },
   {
@@ -157,7 +166,7 @@ const userWeapons = [
     weapons:[{
       name:"Boyce Fist MK.1",
       description:"Sometimes one good punch is all it takes",
-      type: "missle",
+      type: "missile",
       ammo: 20,
       heatGen: -50,
       roll: 10,
@@ -168,11 +177,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
       name:"Boyce Cannon MK.1",
       description:"If I attack its going to hurt",
-      type: "missle",
+      type: "missile",
       ammo: 10,
       heatGen: 20,
       roll: 1,
@@ -183,11 +193,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
-      name:"Boyce Missle Launcher MK.1",
+      name:"Boyce missile Launcher MK.1",
       description:"I love the silence that follows explosions",
-      type: "missle",
+      type: "missile",
       ammo: 10,
       heatGen: 20,
       roll: 6,
@@ -198,11 +209,12 @@ const userWeapons = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
   {
-    name:"Shuler Sniper Lazer MK.1",
+    name:"Shuler Sniper laser MK.1",
     description:"The suns rays are beautiful, but dont hold them too closely.",
-    type: "lazer",
+    type: "laser",
     ammo: 10,
     heatGen: 30,
     roll: 1,
@@ -213,11 +225,12 @@ const userWeapons = [
     value: 2000,
     userId: null,
     level: 1,
+    isEquipped: false
 },
 {
     name:"Shuler Rifle MK.1",
     description:"Few survive the heat of devotion.",
-    type: "lazer",
+    type: "laser",
     ammo: 10,
     heatGen: 10,
     roll: 3,
@@ -228,11 +241,12 @@ const userWeapons = [
     value: 2000,
     userId: null,
     level: 1,
+    isEquipped: false
 },
 {
-    name:"Shuler Lazer Launcher MK.1",
+    name:"Shuler laser Launcher MK.1",
     description:"The light of the moon shone down, and the unworthy were purified.",
-    type: "lazer",
+    type: "laser",
     ammo: 10,
     heatGen: 30,
     roll: 6,
@@ -243,6 +257,7 @@ const userWeapons = [
     value: 2000,
     userId: null,
     level: 1,
+    isEquipped: false
 },
 {
   name:"Richards Rifle MK.1",
@@ -258,6 +273,7 @@ const userWeapons = [
   value: 1500,
   userId: null,
   level: 1,
+  isEquipped: false
 },
 {
   name:"Richards Gattling Gun MK.1",
@@ -273,6 +289,7 @@ const userWeapons = [
   value: 1500,
   userId: null,
   level: 1,
+  isEquipped: false
 },
 {
   name:"Richards Sniper Riffle MK.1",
@@ -288,6 +305,7 @@ const userWeapons = [
   value: 1500,
   userId: null,
   level: 1,
+  isEquipped: false
 },]
     }
 ];

@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
 
     },
-    heat_gen: {
+    heatGen: {
       type:DataTypes.INTEGER,
 
     },
@@ -56,11 +56,11 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
 
     },
-    min_range: {
+    minRange: {
       type:DataTypes.INTEGER,
 
     },
-    max_range: {
+    maxRange: {
       type:DataTypes.INTEGER,
 
     },

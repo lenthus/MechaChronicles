@@ -59,12 +59,12 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'Cascade'
       }
       )
-      User.hasMany(
-        models.Faction, {
-        foreignKey: 'memberId',
-        onDelete: 'Cascade'
-      }
-      )
+      // User.hasMany(
+      //   models.Faction, {
+      //   foreignKey: 'memberId',
+      //   onDelete: 'Cascade'
+      // }
+      // )
       User.hasMany(
         models.Mech, {
         foreignKey: 'userId',
@@ -127,7 +127,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       currentMech: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
     },
     {

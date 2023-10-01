@@ -26,16 +26,16 @@ module.exports = {
       ammo: {
         type: Sequelize.INTEGER
       },
-      heat_gen: {
+      heatGen: {
         type: Sequelize.INTEGER
       },
       roll: {
         type: Sequelize.INTEGER
       },
-      min_range: {
+      minRange: {
         type: Sequelize.INTEGER
       },
-      max_range: {
+      maxRange: {
         type: Sequelize.INTEGER
       },
       damage: {

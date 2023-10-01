@@ -20,13 +20,14 @@ const userBodies = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
     username: 'michaeltest',
     body: [{
       name:"Shuler MK.1",
-      description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
+      description:"Shuler Shrines is known for producing sturdy laser focused parts.",
       health: 150,
       armor: 10,
       weight: 15,
@@ -34,6 +35,7 @@ const userBodies = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -48,6 +50,7 @@ const userBodies = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -62,10 +65,11 @@ const userBodies = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     },
     {
       name:"Shuler MK.1",
-      description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
+      description:"Shuler Shrines is known for producing sturdy laser focused parts.",
       health: 150,
       armor: 10,
       weight: 15,
@@ -73,6 +77,7 @@ const userBodies = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     },
     {
       name:"Richards MK.1",
@@ -84,6 +89,7 @@ const userBodies = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
     }
 ];
@@ -96,6 +102,7 @@ module.exports = {
 for (let userBody of userBodies){
   const {username, body} = userBody
   const theUser = await User.findOne({where:{username}})
+  console.log(theUser)
 
   for( let bodyInfo of body){
     await Body.create({ ...bodyInfo, userId: theUser.id})
@@ -110,6 +117,7 @@ for (let userBody of userBodies){
     for (let userBody of userBodies){
       const {username, body} = userBody
       const theUser = await User.findOne({where:{username}})
+      // console.log(theUser)
     
       for( let bodyInfo of body){
         await Body.destroy({where:{ ...bodyInfo, userId: theUser.id}})

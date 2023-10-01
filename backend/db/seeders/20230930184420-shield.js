@@ -14,12 +14,13 @@ const userShields = [
       name:"Boyce MK.1",
       description:"You cant hit whats not there",
       balistic: 20,
-      lazer: 20,
-      missle: 20,
+      laser: 20,
+      missile: 20,
       weight: 8,
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -28,12 +29,13 @@ const userShields = [
       name:"Shuler MK.1",
       description:"May her light watch over you.",
       balistic: 10,
-      lazer: 30,
-      missle: 10,
+      laser: 30,
+      missile: 10,
       weight: 15,
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -42,12 +44,13 @@ const userShields = [
       name:"Richards MK.1",
       description:"You fell for my trap.",
       balistic: 15,
-      lazer: 15,
-      missle: 15,
+      laser: 15,
+      missile: 15,
       weight: 10,
       value: 1500,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -56,34 +59,37 @@ const userShields = [
       name:"Boyce MK.1",
       description:"You cant hit whats not there",
       balistic: 20,
-      lazer: 20,
-      missle: 20,
+      laser: 20,
+      missile: 20,
       weight: 8,
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     },
     {
       name:"Shuler MK.1",
       description:"May her light watch over you.",
       balistic: 10,
-      lazer: 30,
-      missle: 10,
+      laser: 30,
+      missile: 10,
       weight: 15,
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
     {
       name:"Richards MK.1",
       description:"You fell for my trap.",
       balistic: 15,
-      lazer: 15,
-      missle: 15,
+      laser: 15,
+      missile: 15,
       weight: 10,
       value: 1500,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
     }
 ];

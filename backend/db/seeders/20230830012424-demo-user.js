@@ -18,27 +18,27 @@ module.exports = {
           username: 'Shalakar',
           hashedPassword: bcrypt.hashSync('Taekwondo1'),
           level: 1,
-          currentXp: 0,
+          currentXp: 1,
           currentMech: null,
-          money: 0
+          money: 1
         },
         {
           email: 'michaeltest@michaeltest.com',
           username: 'michaeltest',
           hashedPassword: bcrypt.hashSync('michaeltest'),
           level: 1,
-          currentXp: 0,
+          currentXp: 1,
           currentMech: null,
-          money: 0
+          money: 1
         },
         {
           email: 'devinmrichards95@yahoo.com',
           username: 'GaimerGai',
           hashedPassword: bcrypt.hashSync('password1234@'),
           level: 1,
-          currentXp: 0,
+          currentXp: 1,
           currentMech: null,
-          money: 0
+          money: 1
         },
         {
           id: 711,
@@ -46,9 +46,9 @@ module.exports = {
           username: 'Store',
           hashedPassword: bcrypt.hashSync('thankYouComeAgain'),
           level: 1,
-          currentXp: 0,
+          currentXp: 1,
           currentMech: null,
-          money: 1000000000
+          money: 10000000
         },
       ], { validate: true });
     }

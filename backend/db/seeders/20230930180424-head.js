@@ -22,13 +22,14 @@ const userHeads = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
     username: 'michaeltest',
     head: [{
       name:"Shuler MK.1",
-      description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
+      description:"Shuler Shrines is known for producing sturdy laser focused parts.",
       health: 150,
       armor: 10,
       weight: 15,
@@ -38,6 +39,7 @@ const userHeads = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -54,6 +56,7 @@ const userHeads = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
   },
   {
@@ -70,10 +73,11 @@ const userHeads = [
       value: 1200,
       userId: null,
       level: 1,
+      isEquipped: false
     },
     {
       name:"Shuler MK.1",
-      description:"Shuler Shrines is known for producing sturdy lazer focused parts.",
+      description:"Shuler Shrines is known for producing sturdy laser focused parts.",
       health: 150,
       armor: 10,
       weight: 15,
@@ -83,6 +87,7 @@ const userHeads = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
   },
     {
       name:"Richards MK.1",
@@ -96,6 +101,7 @@ const userHeads = [
       value: 2000,
       userId: null,
       level: 1,
+      isEquipped: false
     }]
     }
 ];

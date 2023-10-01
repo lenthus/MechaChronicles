@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey:'organizerId'
         }
       )
-      Faction.hasMany(
-        models.User,{
-          foreignKey:'memberId'
-        }
-      )
+      // Faction.hasMany(
+      //   models.User,{
+      //     foreignKey:'memberId'
+      //   }
+      // )
     }
   }
   Faction.init({
