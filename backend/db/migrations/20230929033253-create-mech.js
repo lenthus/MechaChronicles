@@ -46,7 +46,7 @@ module.exports = {
       },
       left_shoulder: {
         type: Sequelize.INTEGER,
-        // allowNull: false,
+        allowNull: true,
         references: {
           model: 'Shields',
           key: 'id',
@@ -70,7 +70,7 @@ module.exports = {
       },
       right_shoulder: {
         type: Sequelize.INTEGER,
-        // allowNull: false,
+        allowNull: true,
         references: {
           model: 'Shields',
           key: 'id',
