@@ -52,7 +52,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     isEquipped: {
       type: DataTypes.BOOLEAN,
-
+    },
+    level: {
+      type: DataTypes.INTEGER,
     },
   }, {
     sequelize,

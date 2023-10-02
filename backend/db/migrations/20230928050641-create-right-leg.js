@@ -46,7 +46,9 @@ module.exports = {
       },
       isEquipped: {
         type: Sequelize.BOOLEAN,
-
+      },
+      level: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

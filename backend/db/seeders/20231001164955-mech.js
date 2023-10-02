@@ -54,31 +54,33 @@ const userMechs = [
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    options.tableName = 'Mechs';
+    options.tableName = 'Meches';
 console.log("\n", Mech.tableName, "\n")
 
 for (let userMech of userMechs){
   const {username, mech} = userMech
   const theUser = await User.findOne({where:{username}})
-  // console.log(theUser)
+  console.log(theUser)
 
   for( let mechInfo of mech){
+    console.log(mechInfo)
     await Mech.create({ ...mechInfo, userId: theUser.id})
+    console.log("\n", "hello", "\n")
   }
 }
 
   },
 
   async down (queryInterface, Sequelize) {
-    options.tableName = 'Mechs';
+    options.tableName = 'Meches';
 
     for (let userMech of userMechs){
-      const {username, body} = userMech
+      const {username, mech} = userMech
       const theUser = await User.findOne({where:{username}})
       // console.log(theUser)
     
-      for( let bodyInfo of body){
-        await Mech.destroy({where:{ ...bodyInfo, userId: theUser.id}})
+      for( let mechInfo of mech){
+        await Mech.destroy({where:{ ...mechInfo, userId: theUser.id}})
       }
     }
   }

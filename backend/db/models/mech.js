@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
         models.RightArm,{
           foreignKey:'id'
         }
-      )
+      ),
       Mech.hasOne(
         models.RightLeg,{
           foreignKey:'id'

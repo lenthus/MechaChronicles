@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey:'userId',
           onDelete:'Cascade'
         }
-      ),
+      )
       RightLeg.belongsTo(
         models.Mech,{
           foreignKey:'right_leg',
@@ -52,7 +52,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     isEquipped: {
       type: DataTypes.BOOLEAN,
-
+    },
+    level: {
+      type: DataTypes.INTEGER,
     },
   }, {
     sequelize,

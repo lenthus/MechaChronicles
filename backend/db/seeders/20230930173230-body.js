@@ -102,7 +102,7 @@ module.exports = {
 for (let userBody of userBodies){
   const {username, body} = userBody
   const theUser = await User.findOne({where:{username}})
-  console.log(theUser)
+  // console.log(theUser)
 
   for( let bodyInfo of body){
     await Body.create({ ...bodyInfo, userId: theUser.id})
