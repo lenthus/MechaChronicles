@@ -578,7 +578,7 @@ Parts have: {
 
   arms{
     melee
-    balistic
+    ballistic
     lazer
     missle
   }
@@ -589,7 +589,7 @@ Parts have: {
 
   shoulders{
     can have shields
-    -balistic
+    -ballistic
     -energy
     -missle
   }

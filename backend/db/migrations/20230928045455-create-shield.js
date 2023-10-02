@@ -21,7 +21,7 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      balistic: {
+      ballistic: {
         type: Sequelize.INTEGER
       },
       laser: {

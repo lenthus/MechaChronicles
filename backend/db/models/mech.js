@@ -51,6 +51,16 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey:'right_leg'
         }
       )
+      Mech.hasOne(
+        models.Shield,{
+          foreignKey:'right_shoulder'
+        }
+      ),
+      Mech.hasOne(
+        models.Shield,{
+          foreignKey:'left_shoulder'
+        }
+      )
     }
   }
   Mech.init({

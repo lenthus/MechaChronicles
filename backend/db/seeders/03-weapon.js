@@ -115,7 +115,7 @@ const userWeapons = [
     weapons: [    {
       name:"Richards Rifle MK.1",
       description:"Say hello to my little friend",
-      type: "balistic",
+      type: "ballistic",
       ammo: 15,
       heatGen: 10,
       roll: 3,
@@ -131,7 +131,7 @@ const userWeapons = [
   {
       name:"Richards Gattling Gun MK.1",
       description:"He who shoots 100 times never misses.",
-      type: "balistic",
+      type: "ballistic",
       ammo: 15,
       heatGen: 20,
       roll: 15,
@@ -147,7 +147,7 @@ const userWeapons = [
   {
       name:"Richards Sniper Riffle MK.1",
       description:"Not to be that guy, but my sniper riffles shoot twice.",
-      type: "balistic",
+      type: "ballistic",
       ammo: 15,
       heatGen: 20,
       roll: 2,
@@ -262,7 +262,7 @@ const userWeapons = [
 {
   name:"Richards Rifle MK.1",
   description:"Say hello to my little friend",
-  type: "balistic",
+  type: "ballistic",
   ammo: 15,
   heatGen: 10,
   roll: 3,
@@ -278,7 +278,7 @@ const userWeapons = [
 {
   name:"Richards Gattling Gun MK.1",
   description:"He who shoots 100 times never misses.",
-  type: "balistic",
+  type: "ballistic",
   ammo: 15,
   heatGen: 20,
   roll: 15,
@@ -294,7 +294,7 @@ const userWeapons = [
 {
   name:"Richards Sniper Riffle MK.1",
   description:"Not to be that guy, but my sniper riffles shoot twice.",
-  type: "balistic",
+  type: "ballistic",
   ammo: 15,
   heatGen: 20,
   roll: 2,
@@ -332,7 +332,7 @@ for (let userWeapon of userWeapons){
     for (let userWeapon of userWeapons){
       const {username, weapons} = userWeapon
       const theUser = await User.findOne({where:{username}})
-    
+
       for( let weaponInfo of weapons){
         await Weapon.destroy({where:{ ...weaponInfo, userId: theUser.id}})
       }

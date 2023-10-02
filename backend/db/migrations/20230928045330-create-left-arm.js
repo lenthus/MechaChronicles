@@ -41,7 +41,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
         defaultValue: null,
-        // will need to reference weapon id
+        references:{
+          model:'Weapons',
+          key: 'id',
+        }
       },
       weight: {
         type: Sequelize.INTEGER

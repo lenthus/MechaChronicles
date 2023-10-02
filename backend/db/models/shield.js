@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING,
       allowNull: false,
     },
-    balistic:{
+    ballistic:{
       type:DataTypes.INTEGER,
 
     },
