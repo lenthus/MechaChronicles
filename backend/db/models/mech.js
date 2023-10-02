@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
       )
       Mech.hasOne(
         models.Shield,{
-          foreignKey:'right_shoulder'
+          foreignKey:'id'
         }
       ),
       Mech.hasOne(
