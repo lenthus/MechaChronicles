@@ -1,4 +1,5 @@
 'use strict';
+/** @type {import('sequelize-cli').Migration} */
 
 let options = {};
 if (process.env.NODE_ENV === 'production') {
@@ -7,45 +8,64 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Weapons', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      username: {
-        type: Sequelize.STRING(30),
+      name: {
+        type: Sequelize.STRING,
         allowNull: false,
-        unique: true
       },
-      email: {
-        type: Sequelize.STRING(256),
+      description: {
+        type: Sequelize.STRING,
         allowNull: false,
-        unique: true
       },
-      hashedPassword: {
-        type: Sequelize.STRING.BINARY,
-        allowNull: false
+      type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      ammo: {
+        type: Sequelize.INTEGER
+      },
+      heatGen: {
+        type: Sequelize.INTEGER
+      },
+      roll: {
+        type: Sequelize.INTEGER
+      },
+      minRange: {
+        type: Sequelize.INTEGER
+      },
+      maxRange: {
+        type: Sequelize.INTEGER
+      },
+      damage: {
+        type: Sequelize.INTEGER
+      },
+      value: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id',
+          onDelete:'CASCADE'
+        },
       },
       level: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 1
       },
-      currentXp: {
+      weight: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0
       },
-      money: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0
-      },
-      currentMech: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
+      isEquipped: {
+        type: Sequelize.BOOLEAN,
+
       },
       createdAt: {
         allowNull: false,
@@ -59,9 +79,8 @@ module.exports = {
       }
     }, options);
   },
-
   async down(queryInterface, Sequelize) {
-    options.tableName = "Users";
-    return queryInterface.dropTable(options);
+    options.tableName = 'Weapons';
+    await queryInterface.dropTable(options);
   }
 };

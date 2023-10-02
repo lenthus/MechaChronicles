@@ -1,4 +1,5 @@
 'use strict';
+/** @type {import('sequelize-cli').Migration} */
 
 let options = {};
 if (process.env.NODE_ENV === 'production') {
@@ -7,45 +8,48 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Shields', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      username: {
-        type: Sequelize.STRING(30),
-        allowNull: false,
-        unique: true
+      name: {
+        type: Sequelize.STRING
       },
-      email: {
-        type: Sequelize.STRING(256),
-        allowNull: false,
-        unique: true
+      description: {
+        type: Sequelize.STRING
       },
-      hashedPassword: {
-        type: Sequelize.STRING.BINARY,
-        allowNull: false
+      balistic: {
+        type: Sequelize.INTEGER
+      },
+      laser: {
+        type: Sequelize.INTEGER
+      },
+      missile: {
+        type: Sequelize.INTEGER
+      },
+      value: {
+        type: Sequelize.INTEGER
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id',
+          onDelete:'CASCADE'
+        },
       },
       level: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 1
       },
-      currentXp: {
+      weight: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0
       },
-      money: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0
-      },
-      currentMech: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
+      isEquipped: {
+        type: Sequelize.BOOLEAN,
+
       },
       createdAt: {
         allowNull: false,
@@ -59,9 +63,8 @@ module.exports = {
       }
     }, options);
   },
-
   async down(queryInterface, Sequelize) {
-    options.tableName = "Users";
-    return queryInterface.dropTable(options);
+    options.tableName = "Shields";
+    await queryInterface.dropTable(options);
   }
 };

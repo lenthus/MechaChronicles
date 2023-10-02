@@ -237,6 +237,277 @@ user's information.
       }
     }
     ```
+    API Routes, Mecha Chronicles: Iron Soul
+
+
+
+
+User stuff
+## Get the Current User
+
+Returns the information about the current user that is logged in.
+
+* Require Authentication: true
+* Request
+  * Method: GET
+  * URL: /api/session
+  * Body: none
+
+### Log In a User
+
+Logs in a current user with valid credentials and returns the current user's
+information.
+
+* Require Authentication: false
+* Request
+  * Method: POST
+  * URL: /api/session
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "email": "john.smith@gmail.com",
+      "password": "secret password"
+    }
+    ```
+### Sign Up a User
+
+Creates a new user, logs them in as the current user, and returns the current
+user's information.
+
+Should create basic Mech and assign to new user
+
+* Require Authentication: false
+* Request
+  * Method: POST
+  * URL: /api/users
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@gmail.com",
+      "username": "JohnSmith",
+      "password": "secret password"
+    }
+    ```
+
+### Log out User
+
+Method: DELETE
+
+Url: /api/session
+* Headers:
+    * Content-Type: application/json
+  * Body: None
+
+### Get User Inventory
+
+Method
+Url: /api/session/inventory
+* Headers:
+    * Content-Type: application/json
+  * Body: None
+
+Faction Stuff ** Do not implement now**
+### Create a Faction
+Method: POST
+Url: /api/faction
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Join Faction
+### Create a Faction
+Method: POST
+Url: /api/faction/:factionId
+* Headers:
+    * Content-Type: application/json
+  * Body: None
+
+
+Shields stuff
+### Return all Shield Items (for debug purposes)
+Method: GET
+Url: /api/shields
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Return Shield Item by Id
+Method: GET
+Url: /api/shields/:shieldId
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Create Shield Item
+
+Method: POST
+Url: /api/shields
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Delete Shield Item
+
+Method: DELETE
+Url: /api/shields/:shieldId
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Upgrade Item
+
+Method: PUT
+Url: /api/shields/:shieldId/upgrade
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Edit Item
+
+Method: PUT
+Url: /api/shields/:shieldId/
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Trade/sell Item
+Method: PUT
+Url: /api/shields/:shieldId/trade
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+Weapon stuff
+### Return all Weapon Items (for debug purposes)
+Method: GET
+Url: /api/weapon
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Return Weapon Item by Id
+Method: GET
+Url: /api/weapon/:weaponId
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Create weapon Item
+
+Method: POST
+Url: /api/weapon
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Delete Weapon Item
+
+Method: DELETE
+Url: /api/weapon/:weaponId
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Upgrade Weapon Item
+
+Method: PUT
+Url: /api/weapon/:weaponId/upgrade
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Edit Weapon Item
+
+Method: PUT
+Url: /api/weapon/:weaponId/
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Trade/sell Weapon
+
+Method: PUT
+Url: /api/weapon/:weaponId/trade
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+Mech stuff
+
+### Display All Mechs
+
+** Should return all mechs owned by User **
+
+Method: GET
+Url: /api/mech
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Display Mech by Id
+
+Method: GET
+Url: /api/mech/:mechId
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Create Mech
+
+Method: POST
+Url: /api/mech
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Edit Mech by Id
+
+Method: PUT
+Url: /api/mech/:mechId
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Equip Mech part by Id
+
+Method: PUT
+Url: /api/mech/:mechId/equip
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Equip Mech Shield by Id
+
+Method: PUT
+Url: /api/mech/:mechId/equip/shield
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Equip Mech Weapon by Id
+
+Method: PUT
+Url: /api/mech/:mechId/equip/weapon
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
+### Delete Mech by Id
+
+Method: DELETE
+Url: /api/mech/:mechId/
+* Headers:
+    * Content-Type: application/json
+  * Body: {}
+
 
 ## IDEAS
 
@@ -329,7 +600,7 @@ Parts have: {
     -mid range target speed
     -close range target speed
   }
-} 
+}
 head
 body
 l arm
@@ -342,4 +613,3 @@ r leg
 ## shop
 deal of day (black market)
 each part
-

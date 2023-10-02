@@ -5,6 +5,79 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // define association here
+      User.hasMany(
+        models.LeftArm, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Shield, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Weapon, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.LeftLeg, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.RightLeg, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Body, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.RightArm, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      User.hasMany(
+        models.Head, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      // User.hasMany(
+      //   models.Faction, {
+      //   foreignKey: 'organizerId',
+      //   onDelete: 'Cascade'
+      // }
+      // )
+      // User.hasMany(
+      //   models.Faction, {
+      //   foreignKey: 'memberId',
+      //   onDelete: 'Cascade'
+      // }
+      // )
+      User.hasMany(
+        models.Mech, {
+        foreignKey: 'userId',
+        onDelete: 'Cascade'
+      }
+      )
+      //This is for the current Mech
+      User.hasOne(
+        models.Mech, {
+        foreignKey: 'id',
+        onDelete: 'Cascade'
+      }
+      )
     }
   };
 
@@ -30,21 +103,32 @@ module.exports = (sequelize, DataTypes) => {
           isEmail: true
         }
       },
-      firstName:{
-        type: DataTypes.STRING,
-        allowNull:false
-      },
-      lastName:{
-        type: DataTypes.STRING,
-        allowNull: false
-      },
       hashedPassword: {
         type: DataTypes.STRING.BINARY,
         allowNull: false,
         validate: {
           len: [60, 60]
         }
-      }
+      },
+      level: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 1
+      },
+      currentXp: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      money: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
+      currentMech: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
     },
     {
       sequelize,
