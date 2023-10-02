@@ -292,7 +292,7 @@ const shields = [
     {
         name:"Hasbee MK.1",
         description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
-        balistic: 10,
+        ballistic: 10,
         laser: 10,
         missile: 10,
         weight: 10,
@@ -303,7 +303,7 @@ const shields = [
     {
         name:"Boyce MK.1",
         description:"You cant hit whats not there",
-        balistic: 20,
+        ballistic: 20,
         laser: 20,
         missile: 20,
         weight: 8,
@@ -314,7 +314,7 @@ const shields = [
     {
         name:"Shuler MK.1",
         description:"May her light watch over you.",
-        balistic: 10,
+        ballistic: 10,
         laser: 30,
         missile: 10,
         weight: 15,
@@ -325,7 +325,7 @@ const shields = [
     {
         name:"Richards MK.1",
         description:"You fell for my trap.",
-        balistic: 15,
+        ballistic: 15,
         laser: 15,
         missile: 15,
         weight: 10,
@@ -354,7 +354,7 @@ const weapons = [
     {
         name:"Hasbee Rifle MK.1",
         description:"As far as riffles go its not good, but it does make a cool ack ack sound.",
-        type: "balistic",
+        type: "ballistic",
         ammo: 10,
         heatGen: 10,
         roll: 2,
@@ -474,7 +474,7 @@ const weapons = [
     {
         name:"Richards Rifle MK.1",
         description:"Say hello to my little friend",
-        type: "balistic",
+        type: "ballistic",
         ammo: 15,
         heatGen: 10,
         roll: 3,
@@ -489,7 +489,7 @@ const weapons = [
     {
         name:"Richards Gattling Gun MK.1",
         description:"He who shoots 100 times never misses.",
-        type: "balistic",
+        type: "ballistic",
         ammo: 15,
         heatGen: 20,
         roll: 15,
@@ -504,7 +504,7 @@ const weapons = [
     {
         name:"Richards Sniper Riffle MK.1",
         description:"Not to be that guy, but my sniper riffles shoot twice.",
-        type: "balistic",
+        type: "ballistic",
         ammo: 15,
         heatGen: 20,
         roll: 2,

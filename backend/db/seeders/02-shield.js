@@ -13,7 +13,7 @@ const userShields = [
     shield: [{
       name:"Boyce MK.1",
       description:"You cant hit whats not there",
-      balistic: 20,
+      ballistic: 20,
       laser: 20,
       missile: 20,
       weight: 8,
@@ -28,7 +28,7 @@ const userShields = [
     shield: [{
       name:"Shuler MK.1",
       description:"May her light watch over you.",
-      balistic: 10,
+      ballistic: 10,
       laser: 30,
       missile: 10,
       weight: 15,
@@ -43,7 +43,7 @@ const userShields = [
     shield: [{
       name:"Richards MK.1",
       description:"You fell for my trap.",
-      balistic: 15,
+      ballistic: 15,
       laser: 15,
       missile: 15,
       weight: 10,
@@ -58,7 +58,7 @@ const userShields = [
     shield:[{
       name:"Boyce MK.1",
       description:"You cant hit whats not there",
-      balistic: 20,
+      ballistic: 20,
       laser: 20,
       missile: 20,
       weight: 8,
@@ -70,7 +70,7 @@ const userShields = [
     {
       name:"Shuler MK.1",
       description:"May her light watch over you.",
-      balistic: 10,
+      ballistic: 10,
       laser: 30,
       missile: 10,
       weight: 15,
@@ -82,7 +82,7 @@ const userShields = [
     {
       name:"Richards MK.1",
       description:"You fell for my trap.",
-      balistic: 15,
+      ballistic: 15,
       laser: 15,
       missile: 15,
       weight: 10,
@@ -116,7 +116,7 @@ for (let userShield of userShields){
     for (let userShield of userShields){
       const {username, shield} = userShield
       const theUser = await User.findOne({where:{username}})
-    
+
       for( let shieldInfo of shield){
         await Shield.destroy({where:{ ...shieldInfo, userId: theUser.id}})
       }

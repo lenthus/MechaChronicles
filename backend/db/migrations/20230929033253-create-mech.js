@@ -47,10 +47,10 @@ module.exports = {
       left_shoulder: {
         type: Sequelize.INTEGER,
         // allowNull: false,
-        // references: {
-        //   model: '',
-        //   key: 'id',
-        // },
+        references: {
+          model: 'Shields',
+          key: 'id',
+        },
       },
       left_arm: {
         type: Sequelize.INTEGER,
@@ -71,10 +71,10 @@ module.exports = {
       right_shoulder: {
         type: Sequelize.INTEGER,
         // allowNull: false,
-        // references: {
-        //   model: 'Users',
-        //   key: 'id',
-        // },
+        references: {
+          model: 'Shields',
+          key: 'id',
+        },
       },
       right_arm: {
         type: Sequelize.INTEGER,
