@@ -54,11 +54,12 @@ const userMechs = [
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    options.tableName = 'Meches';
-console.log("\n", Mech.tableName, "\n")
+    options.tableName = 'Mechs';
+console.log("tablename", Mech.tableName, "\n")
 
 for (let userMech of userMechs){
   const {username, mech} = userMech
+  console.log(username)
   const theUser = await User.findOne({where:{username}})
   console.log(theUser)
 
@@ -72,13 +73,13 @@ for (let userMech of userMechs){
   },
 
   async down (queryInterface, Sequelize) {
-    options.tableName = 'Meches';
+    options.tableName = 'Mechs';
 
     for (let userMech of userMechs){
       const {username, mech} = userMech
       const theUser = await User.findOne({where:{username}})
       // console.log(theUser)
-    
+
       for( let mechInfo of mech){
         await Mech.destroy({where:{ ...mechInfo, userId: theUser.id}})
       }
