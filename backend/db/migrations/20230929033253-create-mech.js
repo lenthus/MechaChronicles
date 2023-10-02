@@ -32,7 +32,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Head',
+          model: 'Heads',
           key: 'id',
         },
       },
@@ -40,7 +40,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Body',
+          model: 'Bodies',
           key: 'id',
         },
       },
@@ -56,7 +56,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'LeftArm',
+          model: 'LeftArms',
           key: 'id',
         },
       },
@@ -64,7 +64,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'LeftLeg',
+          model: 'LeftLegs',
           key: 'id',
         },
       },
@@ -80,7 +80,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'RightArm',
+          model: 'RightArms',
           key: 'id',
         },
       },
@@ -88,7 +88,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'RightLeg',
+          model: 'RightLegs',
           key: 'id',
         },
       },

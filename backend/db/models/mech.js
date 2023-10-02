@@ -23,32 +23,32 @@ module.exports = (sequelize, DataTypes) => {
       )
       Mech.hasOne(
         models.Head,{
-          foreignKey:'id'
+          foreignKey:'head'
         }
       )
       Mech.hasOne(
         models.Body,{
-          foreignKey:'id'
+          foreignKey:'body'
         }
       )
       Mech.hasOne(
         models.LeftArm,{
-          foreignKey:'id'
+          foreignKey:'left_arm'
         }
       )
       Mech.hasOne(
         models.LeftLeg,{
-          foreignKey:'id'
+          foreignKey:'left_leg'
         }
       )
       Mech.hasOne(
         models.RightArm,{
-          foreignKey:'id'
+          foreignKey:'right_arm'
         }
       ),
       Mech.hasOne(
         models.RightLeg,{
-          foreignKey:'id'
+          foreignKey:'right_leg'
         }
       )
     }
