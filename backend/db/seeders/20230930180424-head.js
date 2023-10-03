@@ -102,7 +102,20 @@ const userHeads = [
       userId: null,
       level: 1,
       isEquipped: false
-    }]
+    },
+    {
+      name:"Hasbee MK.1",
+      description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
+      health: 100,
+      armor: 10,
+      weight: 10,
+      longRange: 10,
+      midRange: 10,
+      shortRange: 10,
+      value: 1000,
+      userId: null,
+      level: 1,
+},]
     }
 ];
 

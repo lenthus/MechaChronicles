@@ -90,7 +90,18 @@ const userShields = [
       userId: null,
       level: 1,
       isEquipped: false
-    }]
+    },
+    {
+      name:"Hasbee MK.1",
+      description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
+      ballistic: 10,
+      laser: 10,
+      missile: 10,
+      weight: 10,
+      value: 1000,
+      userId: null,
+      level: 1,
+  },]
     }
 ];
 

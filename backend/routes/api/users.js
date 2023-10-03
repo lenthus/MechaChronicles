@@ -27,42 +27,24 @@ const validateSignup = [
       .withMessage('Password must be 6 characters or more.'),
     handleValidationErrors
   ];
-// ******** OLD CODE B4 PHASE5 *********
-// router.post(
-//     '/',
-//     async (req, res) => {
-//       const { email, password, username } = req.body;
-//       const hashedPassword = bcrypt.hashSync(password);
-//       const user = await User.create({ email, username, hashedPassword });
 
-//       const safeUser = {
-//         id: user.id,
-//         email: user.email,
-//         username: user.username,
-//       };
-
-//       await setTokenCookie(res, safeUser);
-
-//       return res.json({
-//         user: safeUser
-//       });
-//     }
-//   );
-// Sign up
 router.post(
     '',
     validateSignup,
     async (req, res) => {
-      const { email, firstName, lastName, password, username } = req.body;
+      const { email, password, username } = req.body;
       const hashedPassword = bcrypt.hashSync(password);
-      const user = await User.create({ email, firstName, lastName, username, hashedPassword });
+      const level = 1
+      const currentXp = 0
+      const money = 0
+      const weaponOne = Weapon.findOne({where:{}})
+      const currentMech = Mech.create()
+      const user = await User.create({ email, username, hashedPassword, level, currentXp, money,});
 
       const safeUser = {
         id: user.id,
         email: user.email,
         username: user.username,
-        firstName: user.firstName,
-        lastName: user.lastName,
       };
 
       await setTokenCookie(res, safeUser);

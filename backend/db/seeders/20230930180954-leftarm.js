@@ -90,7 +90,18 @@ const userLeftArms = [
       userId: null,
       level: 1,
       isEquipped: false
-    }]
+    },
+    {
+      name:"Hasbee MK.1",
+      description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
+      health: 100,
+      armor: 10,
+      weapon: null,
+      weight: 10,
+      value: 1000,
+      userId: null,
+      level: 1,
+  },]
     }
 ];
 
