@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Head.belongsTo(
         models.User,
-        { foreignKey: 'userId',
+        { foreignKey: 'id',
           onDelete:'Cascade' }
       ),
       Head.belongsTo(
         models.Mech,{
-          foreignKey:'head',
+          foreignKey:'id',
         }
       )
     }

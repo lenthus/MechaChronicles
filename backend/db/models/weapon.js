@@ -13,18 +13,18 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Weapon.belongsTo(
         models.User,{
-          foreignKey:'userId',
+          foreignKey:'id',
           onDelete:'Cascade'
         }
       )
       Weapon.belongsTo(
         models.LeftArm,{
-          foreignKey:'weapon'
+          foreignKey:'id'
         }
       )
       Weapon.belongsTo(
         models.RightArm,{
-          foreignKey:'weapon'
+          foreignKey:'id'
         }
       )
 

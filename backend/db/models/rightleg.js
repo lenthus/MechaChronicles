@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       RightLeg.belongsTo(
         models.User,{
-          foreignKey:'userId',
+          foreignKey:'id',
           onDelete:'Cascade'
         }
       )
       RightLeg.belongsTo(
         models.Mech,{
-          foreignKey:'right_leg',
+          foreignKey:'id',
         }
       )
     }
