@@ -143,7 +143,7 @@ router.post(
       };
 
       await setTokenCookie(res, safeUser);
-const theMechs = Mech.findAll({where:{userId: user.id}})
+const theMechs = await Mech.findAll({where:{userId: user.id}})
       return res.json({
         user: safeUser,
         theMechs
