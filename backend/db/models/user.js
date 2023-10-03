@@ -7,31 +7,31 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       User.hasMany(
         models.LeftArm, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
       User.hasMany(
         models.Shield, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
       User.hasMany(
         models.Weapon, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
       User.hasMany(
         models.LeftLeg, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
       User.hasMany(
         models.RightLeg, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
@@ -43,13 +43,13 @@ module.exports = (sequelize, DataTypes) => {
       )
       User.hasMany(
         models.RightArm, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
       User.hasMany(
         models.Head, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
