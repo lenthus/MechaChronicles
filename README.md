@@ -297,6 +297,36 @@ Should create basic Mech and assign to new user
     }
     ```
 
+  *Response
+    Status Code: 200
+      Headers:
+        Content-Type: application/json
+    Body:
+    ```json
+    {
+      "user":{
+        "id":1,
+        "firstName": "John",
+        "lastName":"Smith",
+        "email": "john.smith@gmail.com",
+        "username": "JohnSmith",
+        "level": 0,
+        "currentXp":0,
+        "money":0,
+        "currentMech":{
+          "head": "HasbeeHead",
+          "body": "HasbeeBody",
+          "left_shoulder": "HasbeeLeftShoulder",
+          "left_arm":"HasbeeLeftArm" ,
+          "left_leg":"HasbeeLeftLeg" ,
+          "right_shoulder":"HasbeeRightShoulder" ,
+          "right_arm":"HasbeeRightArm" ,
+          "right_leg":"HasbeeRightLeg" ,
+        }
+      }
+    }
+    ```
+
 ### Log out User
 
 Method: DELETE
@@ -310,9 +340,52 @@ Url: /api/session
 
 Method
 Url: /api/session/inventory
+Request
 * Headers:
     * Content-Type: application/json
   * Body: None
+
+  Response:
+  Body:
+  ```json
+      {
+      "inventory":{
+          "head": {
+            "name":"HasbeeHead",
+            "value": 100,
+          },
+          "body":{
+            "name":"HasbeeBody",
+            "value": 100,
+          },
+          "left_shoulder":{
+            "name":"HasbeeLeftShoulder",
+            "value": 100,
+          },
+          "left_arm":{
+            "name":"HasbeeLeftArm",
+            "value": 100,
+          },
+          "left_leg":{
+            "name":"HasbeeLeftLeg",
+            "value": 100,
+          },
+          "right_shoulder":{
+            "name":"HasbeeRightShoulder",
+            "value": 100,
+          },
+          "right_arm":{
+            "name":"HasbeeRightArm",
+            "value": 100,
+          },
+          "right_leg":{
+            "name":"HasbeeRightLeg",
+            "value": 100,
+          },
+        }
+      }
+  ```
+
 
 Faction Stuff ** Do not implement now**
 ### Create a Faction
@@ -338,6 +411,48 @@ Url: /api/shields
 * Headers:
     * Content-Type: application/json
   * Body: {}
+
+Response:
+* Headers:
+  * Content-Type:application/json
+  * Body:{
+  ```json
+{
+  "Shields": [
+    {
+      "id":1,
+      "name": Shield Name,
+      "description": the description of a shield,
+      "ballistic": percentage reduced of ballistic type of damage,
+      "laser": percentage reduced of laser type of damage,
+      "missile": percentage reduced of missle type of damage,
+      "value": 1000,
+      "userId": 1,
+      "level": 1
+      "weight": 100
+      "isEquipped":{
+        "Mechid": 1
+      }
+    }
+    {
+      "id":2,
+      "name": Shield Name,
+      "description": the description of a shield,
+      "ballistic": percentage reduced of ballistic type of damage,
+      "laser": percentage reduced of laser type of damage,
+      "missile": percentage reduced of missle type of damage,
+      "value": 1000,
+      "userId": 2,
+      "level": 2
+      "weight": 100
+      "isEquipped":{
+        "Mechid": 2
+      }
+    }
+  ]
+}
+  ```
+  }
 
 ### Return Shield Item by Id
 Method: GET
