@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
       //This is for the current Mech
       User.hasOne(
         models.Mech, {
-        foreignKey: 'currentMech',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )

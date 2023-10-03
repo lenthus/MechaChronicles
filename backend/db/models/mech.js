@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       )
       Mech.hasOne(
         models.User,{
-          foreignKey:'currentMech'
+          foreignKey:'id'
         }
       )
       Mech.hasOne(
