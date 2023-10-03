@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       )
       User.hasMany(
         models.Body, {
-        foreignKey: 'userId',
+        foreignKey: 'id',
         onDelete: 'Cascade'
       }
       )
