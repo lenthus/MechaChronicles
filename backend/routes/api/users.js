@@ -43,8 +43,8 @@ router.post(
       // const currentMech = await Mech.create()
       const user = await User.create({ 
         email, username, hashedPassword, level, currentXp, money,
-        Mech:[{
-          Head:[{
+        Mech:{
+          Head:{
             name:"Hasbee MK.1",
             description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
             health: 100,
@@ -55,8 +55,8 @@ router.post(
             shortRange: 10,
             value: 1000,
             level: 1,
-          }],
-          Body:[{
+          },
+          Body:{
             name:"Hasbee MK.1",
             description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
             health: 100,
@@ -65,8 +65,8 @@ router.post(
             speed: 10,
             value: 1000,
             level: 1,
-          }],
-          LeftLeg:[{
+          },
+          LeftLeg:{
             name:"Hasbee MK.1",
             description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
             health: 100,
@@ -75,8 +75,8 @@ router.post(
             speed: 10,
             value: 1000,
             level: 1,
-          }],
-          RightLeg:[{
+          },
+          RightLeg:{
             name:"Hasbee MK.1",
             description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
             health: 100,
@@ -85,8 +85,8 @@ router.post(
             speed: 10,
             value: 1000,
             level: 1,
-          }],
-          LeftArm:[{
+          },
+          LeftArm:{
             name:"Hasbee MK.1",
             description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
             health: 100,
@@ -94,7 +94,7 @@ router.post(
             weight: 10,
             value: 1000,
             level: 1,
-            Weapon:[{
+            Weapon:{
               name:"Hasbee laser MK.1",
               description:"As far as lasers go its not good, but it does make a cool pew pew sound.",
               type: "laser",
@@ -107,9 +107,9 @@ router.post(
               weight: 10,
               value: 1000,
               level: 1,
-            }]
-          }],
-          RightArm:[{
+            }
+          },
+          RightArm:{
             name:"Hasbee MK.1",
             description:"As far as mech parts go Hasbee products are known for being little better than plastic.",
             health: 100,
@@ -117,7 +117,7 @@ router.post(
             weight: 10,
             value: 1000,
             level: 1,
-            Weapon:[{
+            Weapon:{
               name:"Hasbee Rifle MK.1",
               description:"As far as riffles go its not good, but it does make a cool ack ack sound.",
               type: "ballistic",
@@ -130,9 +130,9 @@ router.post(
               weight: 10,
               value: 1000,
               level: 1,
-            }]
-          }]
-        }]
+            }
+          }
+        }
       });
 
 
